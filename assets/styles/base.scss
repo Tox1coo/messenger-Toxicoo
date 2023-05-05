@@ -1,0 +1,155 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Roboto:wght@400;700&display=swap');
+@import "mixins";
+@import "media";
+html {
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  border: none;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  background-color: $primary-background;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.main {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+}
+
+/*  TEXT  */
+
+.title {
+  @include adaptive-font(55, 25);
+
+  color: $white;
+  font-family: 'Caveat', cursive;
+}
+
+.text {
+  @include adaptive-font(22, 12);
+  font-weight: 500;
+  &--small {
+    @include adaptive-font(18, 10);
+  }
+}
+
+.subtitle {
+  @include adaptive-font(35, 20);
+
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-family: 'Caveat', cursive;
+  color: $white;
+
+}
+
+/*  CONTAINER   */
+
+.container {
+  max-width: 140rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+
+/*  BUTTON  */
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: $correct;
+  color: $white;
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  position: relative;
+  &--active {
+    z-index: 2;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      background-color: rgba($correct, 0.5);
+      animation-name: scale-effect;
+      animation-direction: alternate;
+      animation-duration: 1.5s;
+      z-index: -1;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      border-radius: 1rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+}
+@keyframes scale-effect {
+  0%,100%{
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/*    icon    */
+
+.icon-friend {
+  &--friend {
+
+  }
+}
+
+
+/*  Not Correct  */
+
+
+.not-correct {
+  color: red;
+  font-weight: 500;
+}
+
+
+/*    CORRECT  */
+
+.is-correct {
+  color: $correct;
+}
+
+.count {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: #effdce;
+  color: $text-color;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}

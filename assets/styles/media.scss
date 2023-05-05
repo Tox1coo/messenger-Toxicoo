@@ -1,0 +1,48 @@
+@media screen and (max-width: 900px) {
+  #hello-img {
+    display: none;
+  }
+  .form-page {
+    justify-content: center;
+    &__form {
+      flex: 1 1 90% !important;
+      &-title {
+        img {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  #hello-img {
+    display: none;
+  }
+  .form-page {
+    &__form {
+      .form {
+        padding: 1.5rem !important;
+        border-radius: 0.5rem !important;
+        .input {
+          padding-left: 1.5rem !important;
+          margin-top: 1.2rem;
+          margin-bottom: 1.2rem;
+        }
+      }
+    }
+    .form-bottom {
+      &__button {
+        justify-content: center !important;
+        .btn {
+          flex: 0 1 90% !important;
+        }
+      }
+      &__switcher {
+       p {
+         line-height: 2.5rem;
+       }
+      }
+    }
+  }
+}
