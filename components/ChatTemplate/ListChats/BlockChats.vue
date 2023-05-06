@@ -17,6 +17,6 @@ let chat:string = $ref('');
 .chats-block {
   background-color: $primary-background;
   border-right:1px solid #36373f;
-  flex: 0 1 20%;
+  flex: 0 1 25%;
 }
 </style>

@@ -25,7 +25,7 @@ const getAvatar = computed<string>(() => user?.value?.user_metadata.avatars ? us
   gap: 1rem;
   color: $white;
   cursor: pointer;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   border-bottom:1px solid #36373f;
   font-weight: 700;
   &__account {

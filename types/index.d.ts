@@ -63,6 +63,14 @@ declare global {
         friend_uuid: string,
         user_uuid?: string
     }
+
+    interface DiscussionMessage {
+        mid: number,
+        sender_id:string,
+        content: string,
+        time: string,
+        type: string
+    }
 }
 
 export  default {};

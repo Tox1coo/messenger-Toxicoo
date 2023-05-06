@@ -48,7 +48,6 @@ const croppedMessage = computed<string>(() => {
   }
   &__info {
     display: flex;
-    align-items: flex-start;
     width: 100%;
     margin-left: 1rem;
   }
@@ -57,7 +56,6 @@ const croppedMessage = computed<string>(() => {
   &__block {
     &--flex {
       display: flex;
-      align-items: center;
     }
     &--messages {
       flex: 0 1 100%
