@@ -69,7 +69,8 @@ declare global {
         sender_id:string,
         content: string,
         time: string,
-        type: string
+        type: string,
+        read_status: boolean
     }
 }
 
